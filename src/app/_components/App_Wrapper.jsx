@@ -31,14 +31,17 @@ export default function AppWrapper({ children }) {
   useEffect(() => {
     document.documentElement.setAttribute(
       "data-theme",
-      accessibility.isThemeDark ? "dark" : "light"
+      accessibility.isThemeDark ? "dark" : "light",
     );
   }, [accessibility.isThemeDark]);
 
   const adjustFontSize = (increment) => {
     setAccessibility((prev) => ({
       ...prev,
-      fontSizeAdjust: Math.max(1, Math.min(4, prev.fontSizeAdjust + increment)),
+      fontSizeAdjust: Math.max(
+        1,
+        Math.min(2.5, prev.fontSizeAdjust + increment),
+      ),
     }));
   };
 

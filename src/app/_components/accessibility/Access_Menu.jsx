@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { IoAccessibility } from "react-icons/io5";
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
+import { FaCircle } from "react-icons/fa6";
 
 import Toggle from "./Toggle";
 
@@ -61,14 +62,28 @@ export default function AccessMenu({
                 <FaMinus
                   className={styles.sizeItem}
                   role="button"
-                  onClick={() => adjustFontSize(-1)}
+                  onClick={() => adjustFontSize(-0.5)}
+                  aria-label="decrease font size"
                 />
+                <div className={styles.indicators}>
+                  {[1, 1.5, 2, 2.5].map((level) => (
+                    <FaCircle
+                      key={level}
+                      className={`${styles.indicator} ${
+                        accessibility.fontSizeAdjust === level
+                          ? styles.active
+                          : ""
+                      }`}
+                    />
+                  ))}
+                </div>
                 <FaPlus
                   className={styles.sizeItem}
                   role="button"
                   onClick={() => {
-                    adjustFontSize(1);
+                    adjustFontSize(0.5);
                   }}
+                  aria-label="increase font size"
                 />
               </div>
             </div>
