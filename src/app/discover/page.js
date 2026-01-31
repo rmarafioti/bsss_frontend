@@ -2,15 +2,15 @@
 
 import FadeInSection from "../_components/Fade_In_Section";
 
-export default function Feature_Two() {
+export default function Discover() {
   return (
     <main>
       <FadeInSection>
-        <h1>Feature Two</h1>
-        <h2>
+        <h1>Discover</h1>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet
           consectetur adipiscing elit quisque faucibus.
-        </h2>
+        </p>
       </FadeInSection>
     </main>
   );

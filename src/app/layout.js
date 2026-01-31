@@ -3,7 +3,7 @@ import App_Wrapper from "./_components/App_Wrapper";
 import "./globals.css";
 
 export const metadata = {
-  title: "Frontend Scaffold",
+  title: "Big Shoulders Sounds",
   description: "Frontend web app starter code",
   icons: {
     icon: "/favicon.svg",
