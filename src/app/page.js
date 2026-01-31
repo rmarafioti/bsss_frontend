@@ -11,11 +11,11 @@ export default function Home() {
   return (
     <main>
       <FadeInSection>
-        <h1>Landing Page for Big Shoulders Sounds</h1>
-        <h2>
+        <h1>Big Shoulders Sounds</h1>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet
           consectetur adipiscing elit quisque faucibus.
-        </h2>
+        </p>
         <div className={styles.image_container}>
           <Responsive_Image photoData={heroPhoto} />
         </div>

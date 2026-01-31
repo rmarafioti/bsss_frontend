@@ -22,9 +22,10 @@ export default function Navbar() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/featureOne", label: "One" },
-    { href: "/featureTwo", label: "Two" },
-    { href: "/featureThree", label: "Three" },
+    { href: "/listen", label: "Listen" },
+    { href: "/discover", label: "Discover" },
+    { href: "/about", label: "About" },
+    { href: "/blog", label: "Blog" },
   ];
 
   return (

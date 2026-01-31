@@ -6,9 +6,8 @@
 }
 
 .nav_link {
-  width: 120px;
+  width: 160px;
   text-align: center;
-  font-weight: 600;
   font-size: 28px;
   padding: 0.5rem;
   text-decoration: none;
@@ -56,7 +55,6 @@
     position: fixed;
     flex-direction: column;
     text-align: center;
-    height: 39vh;
     z-index: 1000;
   }
 }

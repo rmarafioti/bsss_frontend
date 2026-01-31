@@ -10,7 +10,7 @@
   --foreground: #171717;
   --dm_background: #3b3840;
 
-  --main-font: "Outfit", serif;
+  --main-font: "Caprasimo", serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,23 +45,28 @@ body {
 h1 {
   font-size: 2.5em;
   margin-bottom: 2rem;
+  font-weight: normal;
 }
 
 h2,
 h3 {
   font-size: 2.5em;
   margin-bottom: 2rem;
+  font-weight: normal;
 }
 
 p,
 label,
 button {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 300;
   font-size: 1em;
+  margin-bottom: 1rem;
 }
 
 /* accessibility font style */
 .accessible-font {
-  font-family: Arial, Verdana, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 a {
