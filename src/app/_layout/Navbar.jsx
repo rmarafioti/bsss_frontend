@@ -2,9 +2,9 @@
 
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import Responsive_Image_Theme from "../_components/Responsive_Image_Theme";
-import { icon } from "../_data/photos";
+import { nav_icon } from "../_data/photos";
 import Link from "next/link";
+import Image from "next/image";
 
 /* naming conventions to define responsive design*/
 import pc from "../_styling/navbar.module.css";
@@ -35,10 +35,16 @@ export default function Navbar() {
     <>
       <nav>
         <div className={pc.link_container}>
-          <Link href="/">
-            <Responsive_Image_Theme
-              photoData={icon}
-              className={`${pc.icon} ${isActive("/") ? pc.active_link : ""}`}
+          <Link
+            href="/"
+            className={`${pc.icon_container} ${isActive("/") ? pc.active_link : ""}`}
+          >
+            <Image
+              src={nav_icon.src}
+              alt={nav_icon.alt}
+              height={nav_icon.height}
+              width={nav_icon.width}
+              className={pc.icon}
             />
           </Link>
           {links
@@ -59,7 +65,13 @@ export default function Navbar() {
         {/* mobile navigation menu below */}
         <div className={pc.mobile_nav}>
           <Link href="/">
-            <Responsive_Image_Theme photoData={icon} className={mobile.icon} />
+            <Image
+              src={nav_icon.src}
+              alt={nav_icon.alt}
+              height={nav_icon.height}
+              width={nav_icon.width}
+              className={mobile.icon}
+            />
           </Link>
           {/*hamburger menu*/}
           <div id={mobile.hamMenuContainer} onClick={toggleMenu}>

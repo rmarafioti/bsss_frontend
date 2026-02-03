@@ -5,9 +5,19 @@
   align-items: center;
 }
 
+.icon_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+}
+
 .icon {
-  width: 300px;
-  height: auto
+  width: 100px;
+  height: auto;
+  margin-right: .5rem;
 }
 
 .nav_link {
@@ -18,7 +28,8 @@
   text-decoration: none;
 }
 
-.nav_link:hover {
+.nav_link:hover,
+.icon_container:hover {
   background: rgb(240, 239, 239);
   border-bottom: none;
 }
@@ -36,6 +47,7 @@
 }
 
 @media (max-width: 667px) {
+  .icon_container,
   .icon,
   .nav_menu {
     display: none;
@@ -48,7 +60,7 @@
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 2rem 1rem 1rem 1rem;
     z-index: 1000;
   }
 

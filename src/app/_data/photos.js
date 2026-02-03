@@ -1,9 +1,13 @@
-export const icon = {
-  alt: "website icon and home page button",
-  src_light:
-    "https://res.cloudinary.com/dzpne110u/image/upload/v1770080963/bss_website/branding/bss_rat_black_stack_r8jba4.svg",
-  src_dark:
-    "https://res.cloudinary.com/dzpne110u/image/upload/v1770080963/bss_website/branding/bss_rat_pink_stack_pkzoo8.svg",
+export const nav_icon = {
+  alt: "website navigation bar icon and home page button",
+  src: "https://res.cloudinary.com/dzpne110u/image/upload/v1770128243/bss_website/branding/rat_grey-pink_5_wdwgxw.svg",
+  height: 166,
+  width: 161,
+};
+
+export const footer_icon = {
+  alt: "website footer icon and home page button",
+  src: "https://res.cloudinary.com/dzpne110u/image/upload/v1770080963/bss_website/branding/bss_rat_color_stack_n5qwej.svg",
   height: 360,
   width: 755,
 };
