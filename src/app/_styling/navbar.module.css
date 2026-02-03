@@ -5,6 +5,11 @@
   align-items: center;
 }
 
+.icon {
+  width: 300px;
+  height: auto
+}
+
 .nav_link {
   width: 160px;
   text-align: center;
@@ -14,8 +19,12 @@
 }
 
 .nav_link:hover {
-  background: lightgray;
+  background: rgb(240, 239, 239);
   border-bottom: none;
+}
+
+.active_link {
+  background: lightgray;
 }
 
 .mobile_nav {
@@ -27,6 +36,7 @@
 }
 
 @media (max-width: 667px) {
+  .icon,
   .nav_menu {
     display: none;
   }

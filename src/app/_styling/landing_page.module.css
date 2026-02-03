@@ -3,6 +3,12 @@
     margin-bottom: 2rem;
 }
 
+.hero_image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 @media (max-width: 800px) {
     .image_container {
         width: 100%;
