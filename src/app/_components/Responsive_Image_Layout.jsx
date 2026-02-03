@@ -2,9 +2,7 @@
 
 import { getImageProps } from "next/image";
 
-import styles from "../_styling/responsive_image.module.css";
-
-export default function Responsive_Image({ photoData }) {
+export default function Responsive_Image_Layout({ photoData, className = "" }) {
   const { desktop, mobile, alt } = photoData;
   const primaryAttributes = { alt, priority: true };
 
@@ -29,7 +27,7 @@ export default function Responsive_Image({ photoData }) {
   return (
     <picture>
       <source media="(max-width: 800px)" srcSet={mobileSrcSet} />
-      <img {...desktopProps} className={styles.image} />
+      <img {...desktopProps} className={className} />
     </picture>
   );
 }

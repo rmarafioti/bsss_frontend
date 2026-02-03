@@ -1,3 +1,8 @@
+.icon {
+  width: 200px;
+  height: auto;
+}
+
 #hamMenuContainer {
   display: flex;
   justify-content: center;

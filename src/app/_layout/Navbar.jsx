@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import Responsive_Image_Theme from "../_components/Responsive_Image_Theme";
+import { icon } from "../_data/photos";
 import Link from "next/link";
 
 /* naming conventions to define responsive design*/
@@ -12,6 +14,8 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  const isActive = (href) => pathname === href;
+
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
@@ -21,7 +25,6 @@ export default function Navbar() {
   };
 
   const links = [
-    { href: "/", label: "Home" },
     { href: "/listen", label: "Listen" },
     { href: "/discover", label: "Discover" },
     { href: "/about", label: "About" },
@@ -32,10 +35,22 @@ export default function Navbar() {
     <>
       <nav>
         <div className={pc.link_container}>
+          <Link href="/">
+            <Responsive_Image_Theme
+              photoData={icon}
+              className={`${pc.icon} ${isActive("/") ? pc.active_link : ""}`}
+            />
+          </Link>
           {links
             .filter((link) => link.href)
             .map(({ href, label }) => (
-              <Link key={href} href={href} className={pc.nav_link}>
+              <Link
+                key={href}
+                href={href}
+                className={`${pc.nav_link} ${
+                  isActive(href) ? pc.active_link : ""
+                }`}
+              >
                 {label}
               </Link>
             ))}
@@ -43,8 +58,8 @@ export default function Navbar() {
 
         {/* mobile navigation menu below */}
         <div className={pc.mobile_nav}>
-          <Link href="/" className={pc.nav_link}>
-            Home
+          <Link href="/">
+            <Responsive_Image_Theme photoData={icon} className={mobile.icon} />
           </Link>
           {/*hamburger menu*/}
           <div id={mobile.hamMenuContainer} onClick={toggleMenu}>

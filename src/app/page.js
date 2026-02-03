@@ -2,7 +2,7 @@
 
 import { heroPhoto } from "./_data/photos";
 import FadeInSection from "./_components/Fade_In_Section";
-import Responsive_Image from "./_components/Responsive_image";
+import Responsive_Image_Layout from "./_components/Responsive_Image_Layout";
 import Contact_Form from "./_components/forms/Contact_Form";
 
 import styles from "./_styling/landing_page.module.css";
@@ -17,7 +17,10 @@ export default function Home() {
           consectetur adipiscing elit quisque faucibus.
         </p>
         <div className={styles.image_container}>
-          <Responsive_Image photoData={heroPhoto} />
+          <Responsive_Image_Layout
+            photoData={heroPhoto}
+            className={styles.hero_image}
+          />
         </div>
         <Contact_Form />
       </FadeInSection>
