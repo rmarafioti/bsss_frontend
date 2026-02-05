@@ -10,6 +10,12 @@
   --foreground: #171717;
   --dm_background: #3b3840;
 
+  --light_pink: rgba(242, 221, 222, 1);
+  --vintage_orange: rgba(217, 147, 94, 1);
+  --matte_purple: rgba(66, 58, 71, 1);
+  --rat_grey: rgba(84, 80, 78, 1);
+  --hot_pink: rgba(247, 162, 166, 1);
+
   --main-font: "Caprasimo", serif;
 }
 
@@ -58,7 +64,7 @@ h3 {
 p,
 label,
 button {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-weight: 300;
   font-size: 1em;
   margin-bottom: 1rem;
@@ -66,7 +72,7 @@ button {
 
 /* accessibility font style */
 .accessible-font {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 a {
