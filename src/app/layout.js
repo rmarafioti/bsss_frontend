@@ -5,9 +5,6 @@ import "./globals.css";
 export const metadata = {
   title: "Big Shoulders Sounds",
   description: "Frontend web app starter code",
-  icons: {
-    icon: "/favicon.svg",
-  },
 };
 
 export default function RootLayout({ children }) {
